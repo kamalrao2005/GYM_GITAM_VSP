@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://gsports.gitam.edu/print_stadium/MjE1MTk2/WSAgICAgICAgIA.. -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./GYM enter_files/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="./GYM enter_files/font-awesome.min.css">
+
+	<title></title>
+	<style type="text/css">
+		body {
+			font-size: 18px;
+			font-family: 'Arial';
+			background: #e7e7e7;
+		}
+
+		#print-table {
+			margin: 0 auto;
+			width: 800px;
+			background: #fff;
+			padding: 20px;
+		}
+
+		table {
+			margin: 0 auto;
+		}
+
+		table th {
+			font-weight: bold;
+			text-align: left;
+			width: 25%;
+		}
+
+		table td {
+			/*text-align: center;*/
+			width: 75%;
+		}
+
+		table th,
+		table td {
+			/*padding: 5px;*/
+			/*border: 1px solid #ccc;*/
+		}
+
+		.user-img {
+			width: 50px;
+			/*		height: 50px;*/
+			/*		border-radius: 50%;*/
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="print-table">
+		<div class="card" style="width:600px !important; margin:0 auto;" id="print-pdf">
+			<div class="logo text-center">
+				<!-- <img src="https://gsports.gitam.edu/assets/images/GITAM_logo.png" class="gitam-logo-1" height="50"> -->
+				<img src="./GYM enter_files/gitam-new-logo.png" class="gitam-logo-1" height="50">
+				<h3>Reservation information</h3>
+			</div>
+			<table class="m17 jb jb1 table table-bordered" style="width:100% !important">
+				<tbody>
+					<tr>
+						<th>Stadium</th>
+						<td>
+							Fitness &amp; Performance Centre						</td>
+					</tr>
+					<tr>
+						<th>Playground</th>
+						<td>
+							Fitness &amp; Performance Centre						</td>
+					</tr>
+					<tr>
+						<th>Court</th>
+						<td>
+							room 1						</td>
+					</tr>
+					<tr>
+						<th>Applicant name</th>
+						<td>
+														<img src="./GYM enter_files/img.aspx" class="user-img"> KAMAL RAO						</td>
+					</tr>
+					<tr>
+						<th>Applicant department</th>
+						<td>
+							CSE						</td>
+					</tr>
+					<tr>
+						<th>Applicant campus</th>
+						<td>
+							GIT, Visakhapatnam						</td>
+					</tr>
+					<tr>
+						<th>Applicant mobile</th>
+						<td>
+							7383975615						</td>
+					</tr>
+					<tr>
+						<th>Applicant e-mail</th>
+						<td>
+							knarlank@gitam.in						</td>
+					</tr>
+										<tr>
+						<th>Booking date</th>
+						<td>
+							08-Aug-2024						</td>
+					</tr>
+					<tr>
+						<th>Booking slot</th>
+						<td>
+							04:00 PM to 05:00 PM						</td>
+					</tr>
+
+					<tr>
+						<th>Registration fee</th>
+						<td>
+							FREE						</td>
+					</tr>
+					<tr>
+						<th>Reference number</th>
+						<td>
+							20240807284346						</td>
+					</tr>
+					<tr>
+						<th>Status</th>
+						<td>
+							<b>Approved</b>						</td>
+					</tr>
+					<tr>
+						<th>Remarks</th>
+						<td>
+							<b>Approved</b>						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div style="text-align: center;" id="print-btn"><button class="btn btn-primary" onclick="printpage();" type="button">Download</button></div>
+	</div>
+	<br>
+
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script> -->
+	<script type="text/javascript" src="./GYM enter_files/pdfmake.min.js.download"></script>
+	<script type="text/javascript" src="./GYM enter_files/html2canvas.min.js.download"></script>
+	<script type="text/javascript">
+		function printpage() {
+
+			document.getElementById("print-btn").style.display = 'none';
+			var fileName = '20240807284346' + ".pdf";
+			html2canvas(document.getElementById('print-pdf'), {
+				onrendered: function(canvas) {
+					var data = canvas.toDataURL();
+					var docDefinition = {
+						content: [{
+							image: data,
+							width: 500,
+						}]
+					};
+					pdfMake.createPdf(docDefinition).download(fileName);
+				}
+			});
+		}
+	</script>
+	<style>
+		td {
+			white-space: nowrap;
+		}
+
+		th {
+			white-space: nowrap;
+		}
+	</style>
+
+	
+
+</body></html>
